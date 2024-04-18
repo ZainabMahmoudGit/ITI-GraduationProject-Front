@@ -1,0 +1,27 @@
+<div class="bg-image">
+    <h1 style="color: black;font-family:Sofia;text-align: center;">REVIEWS</h1>
+    <p style="color: black;font-family:Sofia;text-align: center;font-size: larger;">from our clients</p>
+
+    <form  [formGroup]="comment" (ngSubmit)="updatecomment()" style="width: 100% ">
+        <div class="bg-text">
+          <p class="fw-bold fs-4">
+            {{commentdes.Description}}
+          </p> 
+        
+          <div class="col-sm-10">
+            <input id="inputrev" type="text" class="form-control" id="inputName" formControlName="Description" placeholder="Description" /> @if(comment.controls['Description'].invalid && comment.controls['Description'].touched) { @if(comment.controls['Description'].errors?.['required'])
+            {
+            <span style="color: red;"> This Name is required </span> } }
+          
+        </div>
+
+            <br>
+            <button id="inputrev" class="inputrevbutton" type="submit" id="button-addon2" style="display: flex;float: right;">
+                <i class="fa-solid fa-paper-plane">Edit</i>
+            </button>
+
+        </div>
+
+    </form><br>
+
+</div>

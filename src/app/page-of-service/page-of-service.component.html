@@ -1,0 +1,451 @@
+
+
+
+<section>
+    <div class="container-fluid pb-5"  id="main">
+      <div class="intro py-5 rounded-1">
+        <div class="Introduction px-3 py-1 w-50">
+          <button id="pointer" (click)="goToTop()" class="rounded-5 "><i class="fa-solid fa-up-long"></i> top</button>
+          <h1 class="pt-5">Welcome to our services</h1>
+          <h5 class="pb-5 pt-3">
+
+            Best Car Service Centers in Egypt
+          </h5>
+        </div>
+
+      </div>
+
+      <div class="mt-3 smallnav rounded-1 text-center">
+        <nav class="p-3" aria-label="breadcrumb">
+          <ul class="breadcrumb text-white">
+            <li class="breadcrumb-item  text-white"><a routerLink="">Home</a></li>
+
+            <li class="breadcrumb-item active  text-white" aria-current="page">> Service</li>
+          </ul>
+        </nav>
+        <nav class="p-3" aria-label="search">
+          <input type="search" id="search" [(ngModel)]="searchtext" class="form-control w-50 m-auto" placeholder="search">
+        </nav>
+            <button class="d-inline d-md-none my-2 btn " data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class="fa-solid fa-filter"></i> Filter </button>
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Filter according to</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h4>Filtter according to</h4>
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button by-3 text-white"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="false"
+                aria-controls="collapseOne"
+              >
+                Places
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body ">
+
+                <input type="radio" [(ngModel)]="selectedPlace" id="01" name="pla" value="">
+                <label for="01">&nbsp;All Egypt</label> <br>
+
+                <input type="radio" [(ngModel)]="selectedPlace" id="1" name="pla" value="Ain Shams">
+                <label for="1">&nbsp; Ain Shams</label> <br>
+
+                <input type="radio" [(ngModel)]="selectedPlace" id="2" name="pla" value="El dokki">
+                <label for="2">&nbsp; El dokki</label><br>
+
+                <input type="radio" [(ngModel)]="selectedPlace" id="3" name="pla"  value="Mokkatm">
+                 <label for="3">&nbsp; Mokkatm</label><br>
+
+                <input type="radio" [(ngModel)]="selectedPlace" id="4" name="pla" value="Elmaadi">
+                 <label for="4">&nbsp; Elmaadi</label><br>
+
+                <input type="radio" [(ngModel)]="selectedPlace" id="5" name="pla" value="Faisel">
+                 <label for="5">&nbsp; Faisel</label><br>
+
+                <input type="radio" [(ngModel)]="selectedPlace" id="6" name="pla" value="Fayoum">
+                 <label for="6">&nbsp; Fayoum</label><br>
+
+                <input type="radio" [(ngModel)]="selectedPlace" id="7" name="pla" value="Beni suif">
+                 <label for="7">&nbsp; Beni suif</label><br>
+
+                <input type="radio" [(ngModel)]="selectedPlace" id="8" name="pla" value="Minia">
+                 <label for="8">&nbsp; Minia</label><br>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item py-5">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                Model
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <input type="radio"[(ngModel)]="selectedMark" name="model" value="" id="10">
+                <label for="10">&nbsp; All Models</label> <br>
+
+                <input type="radio"[(ngModel)]="selectedMark" name="model" value="Kia" id="11">
+                <label for="11">&nbsp;Kia</label> <br>
+
+                <input type="radio"[(ngModel)]="selectedMark" name="model" value="BMW" id="12">
+                <label for="12">&nbsp;BMW</label> <br>
+
+                <input type="radio"[(ngModel)]="selectedMark" name="model" value="Hundai" id="13">
+                <label for="13">&nbsp;Hundai</label> <br>
+
+                <input type="radio"[(ngModel)]="selectedMark" name="model" value="Toyota" id="14">
+                <label for="14">&nbsp;Toyota</label> <br>
+
+                <input type="radio"[(ngModel)]="selectedMark" name="model" value="Logan" id="15">
+                <label for="15">&nbsp;Logan</label> <br>
+
+                <input type="radio"[(ngModel)]="selectedMark" name="model" value="Borsh" id="16">
+                <label for="16">&nbsp;Borsh</label> <br>
+
+                <input type="radio"[(ngModel)]="selectedMark" name="model" value="Nissan" id="17">
+                <label for="17">&nbsp;Nissan</label> <br>
+
+
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                Services
+              </button>
+            </h2>
+            <div
+              id="collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingThree"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <input type="radio" [(ngModel)]="selectedService" name="Type" value="" id="20">
+                <label for="20">&nbsp;All services</label> <br>
+
+                 <input type="radio" [(ngModel)]="selectedService" name="service" value="Mechanical" id="21">
+                  <label for="21">&nbsp;Mechanical</label> <br>
+
+
+
+                  <input type="radio"[(ngModel)]="selectedService" name="service" value="Electrecity" id="22">
+                <label for="22">&nbsp;Electrecity</label> <br>
+
+
+                <input type="radio"[(ngModel)]="selectedService" name="service" value="suspintion" id="23">
+                <label for="23">&nbsp;suspintion</label> <br>
+
+                <input type="radio"[(ngModel)]="selectedService" name="service" value="Computer Detiction" id="24">
+                <label for="24">&nbsp;Computer detiction</label> <br>
+
+                <input type="radio"[(ngModel)]="selectedService" name="service" value="car Furniture" id="25">
+                <label for="25">&nbsp;car Furniture</label> <br>
+
+                <input type="radio"[(ngModel)]="selectedService" name="service" value="Oil changes Offer" id="26">
+                <label for="26">&nbsp;Oil change</label> <br>
+
+                <input type="radio"[(ngModel)]="selectedService" name="service" value="Car Wash" id="27">
+                <label for="27">&nbsp;Car Wash</label> <br>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+      <div class="container-fluid bg-light px-3 mt-0 mb-5">
+        <div class="row pt-5">
+          <div class="intro col-3 bg-light rounded-2 lh-1 h-100 p-3">
+
+            <div class=" d-none d-md-block lh-lg">
+              <h4>Filtter according to</h4>
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button
+                      class="accordion-button by-3 text-white"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne"
+                      aria-expanded="false"
+                      aria-controls="collapseOne"
+                    >
+                      Places
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseOne"
+                    class="accordion-collapse collapse show"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body ">
+
+                      <input type="radio" [(ngModel)]="selectedPlace" id="01" name="places" value="">
+                      <label for="01">&nbsp;All Egypt</label> <br>
+
+                      <input type="radio" [(ngModel)]="selectedPlace" id="1" name="places" value="Ain Shams">
+                      <label for="1">&nbsp; Ain Shams</label> <br>
+
+                      <input type="radio" [(ngModel)]="selectedPlace" id="2" name="places" value="El dokki">
+                      <label for="2">&nbsp; El dokki</label><br>
+
+                      <input type="radio" [(ngModel)]="selectedPlace" id="3" name="places"  value="Mokkatm">
+                       <label for="3">&nbsp; Mokkatm</label><br>
+
+                      <input type="radio" [(ngModel)]="selectedPlace" id="4" name="places" value="Elmaadi">
+                       <label for="4">&nbsp; Elmaadi</label><br>
+
+                      <input type="radio" [(ngModel)]="selectedPlace" id="5" name="places" value="Faisel">
+                       <label for="5">&nbsp; Faisel</label><br>
+
+                      <input type="radio" [(ngModel)]="selectedPlace" id="6" name="places" value="Fayoum">
+                       <label for="6">&nbsp; Fayoum</label><br>
+
+                      <input type="radio" [(ngModel)]="selectedPlace" id="7" name="places" value="Beni suif">
+                       <label for="7">&nbsp; Beni suif</label><br>
+
+                      <input type="radio" [(ngModel)]="selectedPlace" id="8" name="places" value="Minia">
+                       <label for="8">&nbsp; Minia</label><br>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item py-5">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      Model
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseTwo"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      <input type="radio"[(ngModel)]="selectedMark" name="model" value="" id="10">
+                      <label for="10">&nbsp; All Models</label> <br>
+
+                      <input type="radio"[(ngModel)]="selectedMark" name="make" value="Kia" id="11">
+                      <label for="11">&nbsp;Kia</label> <br>
+
+                      <input type="radio"[(ngModel)]="selectedMark" name="make" value="BMW" id="12">
+                      <label for="12">&nbsp;BMW</label> <br>
+
+                      <input type="radio"[(ngModel)]="selectedMark" name="make" value="Hundai" id="13">
+                      <label for="13">&nbsp;Hundai</label> <br>
+
+                      <input type="radio"[(ngModel)]="selectedMark" name="make" value="Toyota" id="14">
+                      <label for="14">&nbsp;Toyota</label> <br>
+
+                      <input type="radio"[(ngModel)]="selectedMark" name="make" value="Logan" id="15">
+                      <label for="15">&nbsp;Logan</label> <br>
+
+                      <input type="radio"[(ngModel)]="selectedMark" name="make" value="Borsh" id="16">
+                      <label for="16">&nbsp;Borsh</label> <br>
+
+                      <input type="radio"[(ngModel)]="selectedMark" name="make" value="Nissan" id="17">
+                      <label for="17">&nbsp;Nissan</label> <br>
+
+
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      Services
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseThree"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+
+                       <input type="radio" [(ngModel)]="selectedService" name="Type" value="" id="20">
+                        <label for="20">&nbsp;All services</label> <br>
+
+                       <input type="radio" [(ngModel)]="selectedService" name="Type" value="Mechanical" id="21">
+                        <label for="21">&nbsp;Mechanical</label> <br>
+
+
+
+                        <input type="radio"[(ngModel)]="selectedService" name="Type" value="Electrecity" id="22">
+                      <label for="22">&nbsp;Electrecity</label> <br>
+
+
+                      <input type="radio"[(ngModel)]="selectedService" name="Type" value="suspintion" id="23">
+                      <label for="23">&nbsp;suspintion</label> <br>
+
+                      <input type="radio"[(ngModel)]="selectedService" name="Type" value="Computer Detiction" id="24">
+                      <label for="24">&nbsp;Computer detiction</label> <br>
+
+                      <input type="radio"[(ngModel)]="selectedService" name="Type" value="car Furniture" id="25">
+                      <label for="25">&nbsp;car Furniture</label> <br>
+
+                      <input type="radio"[(ngModel)]="selectedService" name="Type" value="Oil changes Offer" id="26">
+                      <label for="26">&nbsp;Oil change</label> <br>
+
+                      <input type="radio"[(ngModel)]="selectedService" name="Type" value="Car Wash" id="27">
+                      <label for="27">&nbsp;Car Wash</label> <br>
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-9 col-12 mycard ">
+            @if (datafromapi.length===0) {
+
+              <p class="text-center fs-4 fw-bold">No service Here !</p>
+            }
+            @for (item of datafromapi | filter:searchtext |filter:selectedPlace|filter:selectedMark|filter:selectedService| paginate: { itemsPerPage: 5, currentPage: crntpage }     ; track $index ) {
+            <div class="row">
+              <div class="card mb-5 w-100 ms-1" >
+                <div class="row g-0">
+                  <div class="col-md-3">
+                    <img src="http://127.0.0.1:8000/{{ item.image }}" class="img-fluid rounded-start" alt="..."
+                      style="width: 200px; height: 200px;" />
+                  </div>
+                  <div class="col-md-9">
+                    <div class="row " >
+                      <div class="col-7">
+                        <div class="card-body">
+                          <h5 class="card-title">{{item['name']}}</h5>
+
+                          <p class="card-text">
+                            <small class="text-muted"
+                              >Last updated was {{item['updated_at']}}</small
+                            >
+                          </p>
+                        </div>
+                      </div>
+                      <div class="col-5 pt-1 lh-lg fw-bold">
+                        <div> <i class="fa-solid fa-calendar-days fs-3"> </i> Working Time :
+
+
+                        </div>
+                        <div>
+
+
+                          <div style="margin-top: 20px;">
+                            <table >
+                              <thead>
+                                <tr style="background-color: #f2f2f2;">
+                                  <th style="padding: 2px; border: 1px solid #dddddd;">Day</th>
+                                  <th style="padding: 2px; border: 1px solid #dddddd;">Start Hour</th>
+                                  <th style="padding: 2px; border: 1px solid #dddddd;">End Hour</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                @for (item of item.days; track $index) {
+                                  <tr>
+                                    <td style="padding: 8px; border: 1px solid #dddddd;">{{ item.day }}</td>
+                                    <td style="padding: 8px; border: 1px solid #dddddd;">{{ item.start_hour }}</td>
+                                    <td style="padding: 8px; border: 1px solid #dddddd;">{{ item.end_hour }}</td>
+                                  </tr>
+                                }
+
+                              </tbody>
+                            </table>
+                          </div>
+
+
+
+
+
+
+
+
+                        </div>
+
+                        <button class="btn rounded-pill my-2"><a routerLink="/details-service/{{item.id}}" class="fw-medium text-white">see detailes</a>  </button>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+            </div>
+
+          }
+          <pagination-controls class="" (pageChange)="crntpage=$event"></pagination-controls>
+
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
